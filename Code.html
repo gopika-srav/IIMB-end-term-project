@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Susmita's Boutique</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f06292;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #f8bbd0;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 20px;
+      color: #880e4f;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    footer {
+      background-color: #f06292;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .product {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product p {
+      margin: 10px 0;
+      color: #555;
+    }
+    .product p:nth-child(2) {
+      font-weight: bold;
+      color: #d63384;
+    }
+    .product-list {
+      line-height: 1.8;
+      padding-left: 20px;
+    }
+    h3, h2 {
+      color: #880e4f;
+    }
+    .mission-vision {
+  background-color: #fff0f5;
+  padding: 50px 20px;
+  text-align: center;
+}
+.mission-vision h2 {
+  color: #880e4f;
+  margin-bottom: 30px;
+}
+.mv-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.mv-box {
+  background-color: #ffffff;
+  border: 1px solid #f8bbd0;
+  border-radius: 12px;
+  padding: 25px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.mv-box h3 {
+  color: #d63384;
+  margin-bottom: 15px;
+}
+.mv-box p {
+  color: #555;
+  font-size: 15px;
+}
+    .contact, .order-section {
+      background-color: #fce4ec;
+      border: 1px solid #f06292;
+      border-radius: 10px;
+      padding: 30px;
+      margin-top: 30px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    input[type="email"], textarea, input[type="text"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    .primary-btn {
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    /* Review Section */
+    .testimonials {
+      background-color: #fff8f0;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .testimonials h2 {
+      color: #880e4f;
+      margin-bottom: 10px;
+    }
+
+    .testimonials .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .testimonial-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #f8bbd0;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .stars {
+      color: #fbc02d;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    <style>
+.awards {
+  background-color: #fce4ec;
+  padding: 50px 20px;
+  text-align: center;
+}
+.awards h2 {
+  color: #880e4f;
+  margin-bottom: 10px;
+}
+.awards .subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+.award-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.award-card {
+  background-color: #fff;
+  border: 1px solid #f8bbd0;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.award-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+.award-card h4 {
+  color: #d63384;
+  margin: 10px 0;
+}
+.award-card p {
+  font-size: 14px;
+  color: #444;
+}
+    .card p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .card h4 {
+      margin: 10px 0 0;
+      color: #880e4f;
+    }
+
+    .card .position {
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Susmita's Boutique</h1>
+    <p>Exclusive Fashion for Women</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Collections</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Welcome to Susmita's Boutique</h2>
+    <p>Find the latest trends in women's clothing. Elegance, comfort, and style—all in one place.</p>
+    <h3>Featured Products</h3>
+    <div class="products">
+      <div class="product">
+        <img src="WhatsApp Image 2025-05-07 at 19.45.39_061bd961.jpg" alt="Silk Saree">
+        <p>Designer Silk Saree</p>
+        <p>₹2,499</p>
+      </div>
+      <div class="product">
+        <img src="WhatsApp Image 2025-05-07 at 19.45.38_9c3f5d72.jpg" alt="Punjabi Dress">
+        <p>Punjabi Patiala Suit</p>
+        <p>₹1,899</p>
+      </div>
+      <div class="product">
+        <img src="WhatsApp Image 2025-05-07 at 19.45.38_c6b45630.jpg" alt="Frock">
+        <p>Elegant Party Frock</p>
+        <p>₹2,000</p>
+      </div>
+      <div class="product">
+        <img src="WhatsApp Image 2025-05-07 at 19.45.38_0eaa464c.jpg" alt="Cotton Saree">
+        <p>Georgette Embroidery Saree</p>
+        <p>₹3,199</p>
+      </div>     
+    </div>
+  </section>
+  <section>
+    <h3>Women's Exclusive Product Line (Prices in ₹)</h3>
+
+    <h4>1. Ethnic Wear</h4>
+    <div class="product-list">
+      <p>Designer Kurtis – ₹1,299</p>
+      <p>Anarkali Suits – ₹2,499</p>
+      <p>Sarees:</p>
+      <ul>
+        <li>Cotton Sarees – ₹1,499</li>
+        <li>Silk Sarees – ₹3,499</li>
+        <li>Party Wear Sarees – ₹4,999</li>
+        <li>Daily Wear Printed Sarees – ₹999</li>
+      </ul>
+    </div>
+
+    <h4>2. Western Wear</h4>
+    <div class="product-list">
+      <p>Casual Tops – ₹599</p>
+      <p>Dresses (Midi/Maxi) – ₹1,499</p>
+      <p>Jeans – ₹1,199</p>
+    </div>
+
+    <h4>3. Accessories</h4>
+    <div class="product-list">
+      <p>Handbags – ₹899 to ₹2,499</p>
+      <p>Statement Jewelry Sets – ₹699</p>
+      <p>Sunglasses – ₹499</p>
+    </div>
+    <h4>4. Footwear</h4>
+    <div class="product-list">
+      <p>Block Heels – ₹1,199</p>
+      <p>Juttis – ₹799</p>
+      <p>Sneakers – ₹999</p>
+    </div>
+  </section>
+  <section class="mission-vision">
+    <h2>Our Mission & Vision</h2>
+    <div class="mv-container">
+      <div class="mv-box">
+        <h3>Our Mission</h3>
+        <p>At Susmita's Boutique, our mission is to empower women by providing high-quality, stylish, and affordable fashion that celebrates individuality, tradition, and elegance.</p>
+      </div>
+      <div class="mv-box">
+        <h3>Our Vision</h3>
+        <p>To become a leading name in women's fashion by blending cultural heritage with contemporary trends, and creating a boutique experience that inspires confidence and self-expression.</p>
+      </div>
+    </div>
+  </section> 
+  <section>
+    <h3>About the Owner</h3>
+    <p>Hello! I’m Susmita, the founder of this boutique. Fashion has always been my passion—especially the grace and beauty found in women’s ethnic and modern wear. I started this venture with a simple dream: to create a space where women can find outfits that make them feel confident, elegant, and truly themselves.
+
+        Every piece you see here is handpicked or designed with love. From timeless sarees to trendy frocks and accessories, I believe that clothing is more than fabric—it’s expression, tradition, and identity. I hope you enjoy wearing these as much as I’ve enjoyed creating and curating them for you.
+        
+        Thank you for being part of this journey!</p>
+  </section>
+
+  <!-- Review Section -->
+  <section class="testimonials">
+    <h2>Client Success Stories</h2>
+    <p class="subtitle">What our customers say about their experience with us</p>
+    <div class="testimonial-cards">
+      <div class="card">
+        <img src="WhatsApp Image 2025-05-07 at 20.38.38_a6e8c8ac.jpg" alt="Priya K.">
+        <div class="stars">★★★★★</div>
+        <p>"Susmita's Boutique transformed my wardrobe! I feel confident and stylish in every outfit."</p>
+        <h4>Priya K.</h4>
+        <p class="position">Marketing Professional, Mumbai</p>
+      </div>
+      <div class="card">
+        <img src="WhatsApp Image 2025-05-07 at 20.38.37_d55d7d63.jpg" alt="Rahul S.">
+        <div class="stars">★★★★★</div>
+        <p>"My wife loved the designer saree! Beautiful work and great quality. Totally worth it."</p>
+        <h4>Rahul S.</h4>
+        <p class="position">IT Manager, Bangalore</p>
+      </div>
+      <div class="card">
+        <img src="WhatsApp Image 2025-05-07 at 20.32.41_3f4a60c7hhhhh.jpg" alt="Anjali I.">
+        <div class="stars">★★★★☆</div>
+        <p>"The kurti I received was lovely. Delivery was a little late, but customer service was helpful."</p>
+        <h4>Anjali I.</h4>
+        <p class="position">Student, Hyderabad</p>
+      </div>
+      <section class="awards">
+        <h2>Our Achievements</h2>
+        <p class="subtitle">Proud moments from Susmita's Boutique journey</p>
+        <div class="award-cards">
+          <div class="award-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Best Boutique Award">
+            <h4>Best Boutique 2024</h4>
+            <p>Honored at the Andhra Pradesh Women's Business Expo for excellence in ethnic fashion.</p>
+          </div>
+          <div class="award-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Customer Choice">
+            <h4>Customer Choice Award</h4>
+            <p>Rated 4.9/5 by over 500 happy customers for quality, style, and service.</p>
+          </div>
+          <div class="award-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="Startup Recognition">
+            <h4>Top Women-Led Startup</h4>
+            <p>Recognized by Guntur Chamber of Commerce for entrepreneurship and innovation.</p>
+          </div>
+        </div>
+      </section>      
+    </div>
+  </section>
+  <section>
+    <h3>Visit Us</h3>
+    <p>Vaishnav Complex, 67 Number</p>
+    <p>Guntur 1 near flipcart , andhra Pradesh</p>
+  </section>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+</div>
+<button type="submit" class="primary-btn">Send Message</button>
+</form>
+
+  <section class="contact">
+    <h3>Contact Me</h3>
+    <p><strong>Phone:</strong> <a href="tel:9700830039">9700830039</a></p>
+    <p><strong>Email:</strong> <a href="mailto:susmitha@gmail.com">susmitha@gmail.com</a></p>
+  </section>
+  <section class="order-section">
+    <h3>Order Now</h3>
+    <p>To place an order, please contact us via the details above or fill out the form.</p>
+    <form action="submit_order.php" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <button type="submit" class="primary-btn">Place Order</button>
+
+  <!-- Footer (unchanged) -->
+  <footer>
+    <p>&copy; 2025 Susmita's Boutique. All rights reserved.</p>
+  </footer>
+</body>
+</html>
